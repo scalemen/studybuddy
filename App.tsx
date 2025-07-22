@@ -12,6 +12,15 @@ import TopicSearch from "@/pages/topic-search";
 import MiniGames from "@/pages/mini-games";
 import StudyPlannerPage from "@/pages/study-planner";
 import NotFound from "@/pages/not-found";
+import Chatbot from "./chatbot";
+import DrawingNotes from "./drawing-notes";
+import LiveChat from "./live-chat";
+import GroupQuiz from "./group-quiz";
+import CollaborativeWorkspace from "./collaborative-workspace";
+import VirtualStudyRooms from "./virtual-study-rooms";
+import CareerGuidance from "./career-guidance";
+import ResearchAssistant from "./research-assistant";
+import AdaptiveLearning from "./adaptive-learning";
 
 function ProtectedRoute({ component: Component }: { component: React.ComponentType }) {
   const { isAuthenticated, isLoading } = useAuth();
@@ -47,6 +56,15 @@ function App() {
       <Route path="/mini-games" component={() => <ProtectedRoute component={MiniGames} />} />
       <Route path="/mini-games/:gameId" component={() => <ProtectedRoute component={MiniGames} />} />
       <Route path="/study-planner" component={() => <ProtectedRoute component={StudyPlannerPage} />} />
+      <Route path="/chatbot" component={() => <ProtectedRoute component={Chatbot} />} />
+      <Route path="/drawing-notes" component={() => <ProtectedRoute component={DrawingNotes} />} />
+      <Route path="/live-chat" component={() => <ProtectedRoute component={LiveChat} />} />
+      <Route path="/group-quiz" component={() => <ProtectedRoute component={GroupQuiz} />} />
+      <Route path="/collaborative-workspace" component={() => <ProtectedRoute component={CollaborativeWorkspace} />} />
+      <Route path="/virtual-study-rooms" component={() => <ProtectedRoute component={VirtualStudyRooms} />} />
+      <Route path="/career-guidance" component={() => <ProtectedRoute component={CareerGuidance} />} />
+      <Route path="/research-assistant" component={() => <ProtectedRoute component={ResearchAssistant} />} />
+      <Route path="/adaptive-learning" component={() => <ProtectedRoute component={AdaptiveLearning} />} />
       <Route component={NotFound} />
     </Switch>
   );
