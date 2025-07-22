@@ -35,9 +35,11 @@ export default function Dashboard() {
               <Plus className="h-4 w-4 mr-1" /> New Note
             </Button>
           </Link>
-          <Button variant="outline" size="sm">
-            <CalendarDays className="h-4 w-4 mr-1" /> Study Planner
-          </Button>
+          <Link href="/study-planner">
+            <Button variant="outline" size="sm">
+              <CalendarDays className="h-4 w-4 mr-1" /> Study Planner
+            </Button>
+          </Link>
         </div>
       </div>
       
