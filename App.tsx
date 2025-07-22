@@ -11,6 +11,14 @@ import HomeworkHelper from "@/pages/homework-helper";
 import TopicSearch from "@/pages/topic-search";
 import MiniGames from "@/pages/mini-games";
 import StudyPlannerPage from "@/pages/study-planner";
+import Chatbot from "@/pages/chatbot";
+import DigitalWhiteboard from "@/pages/digital-whiteboard";
+import StudyGroups from "@/pages/study-groups";
+import VideoCall from "@/pages/video-call";
+import QuizArena from "@/pages/quiz-arena";
+import StudyTimer from "@/pages/study-timer";
+import ProgressTracker from "@/pages/progress-tracker";
+import StudyResources from "@/pages/study-resources";
 import NotFound from "@/pages/not-found";
 
 function ProtectedRoute({ component: Component }: { component: React.ComponentType }) {
@@ -47,6 +55,14 @@ function App() {
       <Route path="/mini-games" component={() => <ProtectedRoute component={MiniGames} />} />
       <Route path="/mini-games/:gameId" component={() => <ProtectedRoute component={MiniGames} />} />
       <Route path="/study-planner" component={() => <ProtectedRoute component={StudyPlannerPage} />} />
+      <Route path="/chatbot" component={() => <ProtectedRoute component={Chatbot} />} />
+      <Route path="/whiteboard" component={() => <ProtectedRoute component={DigitalWhiteboard} />} />
+      <Route path="/study-groups" component={() => <ProtectedRoute component={StudyGroups} />} />
+      <Route path="/video-call" component={() => <ProtectedRoute component={VideoCall} />} />
+      <Route path="/quiz-arena" component={() => <ProtectedRoute component={QuizArena} />} />
+      <Route path="/study-timer" component={() => <ProtectedRoute component={StudyTimer} />} />
+      <Route path="/progress" component={() => <ProtectedRoute component={ProgressTracker} />} />
+      <Route path="/resources" component={() => <ProtectedRoute component={StudyResources} />} />
       <Route component={NotFound} />
     </Switch>
   );
